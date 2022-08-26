@@ -36,10 +36,10 @@ if word[4] == character:
     print(character + " found at index 4")
 
 if matching_number == 1:
-    print(matching_number, " instance of " + character + " found in " + word)
+    print(matching_number, "instance of " + character + " found in " + word)
 
 if matching_number >= 2:
-    print(matching_number, " instances of " + character + " found in " + word)
+    print(matching_number, "instances of " + character + " found in " + word)
 
 if matching_number == 0:
     print("No instances of " + character + " found in " + word)
