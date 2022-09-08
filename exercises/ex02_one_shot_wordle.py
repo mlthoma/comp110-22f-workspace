@@ -13,7 +13,7 @@ YELLOW_BOX: str = "\U0001F7E8"
 emoji_of_guess: str = ""
 
 while len(guess) != secret_length:
-        guess = str(input("That was not " + str(secret_length) + " letters! Try again: "))
+    guess = str(input("That was not " + str(secret_length) + " letters! Try again: "))
 # This loop detects if someone didn't guess a word with the same number of letters as the secret word.
 # This loop prevents people from moving on with the game until they enter a word that has the same length as the secret.
 while i < secret_length:
