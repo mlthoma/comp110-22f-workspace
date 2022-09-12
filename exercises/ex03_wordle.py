@@ -34,6 +34,7 @@ def emojified(guess: str, secret_word: str) -> str:
         i += 1
     return emoji_of_guess
 
+
 def input_guess(expected_length: int) -> str:
     """Given an integer of the expected length of a guess, this will prompt the user for a guess until they provide one of the expected length."""
     guess_input: str = str(input("Enter a " + str(expected_length) + " character word: "))
