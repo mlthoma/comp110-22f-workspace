@@ -24,7 +24,7 @@ while i < secret_length:
     else:
         character_in_word: bool = False
         alternate_indices: int = 0
-        while character_in_word == False and alternate_indices < secret_length:
+        while not character_in_word and alternate_indices < secret_length:
             if guess[i] == secret_word[alternate_indices]:
                 character_in_word = True
     
