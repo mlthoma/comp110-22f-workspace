@@ -18,7 +18,7 @@ def contains_char(word: str, letter: str) -> bool:
 
 
 def emojified(guess: str, secret_word: str) -> str:
-    """Given a guess and the secret word, this function definition returns the corresponding emoji"""
+    """Given a guess and the secret word, this function definition returns the corresponding emoji."""
     assert len(guess) == len(secret_word)
     i: int = 0
     emoji_of_guess: str = ""
@@ -35,7 +35,7 @@ def emojified(guess: str, secret_word: str) -> str:
     return emoji_of_guess
 
 def input_guess(expected_length: int) -> str:
-    """Given an integer of the expected length of a guess, this will prompt the user for a guess until they provide one of the expected length"""
+    """Given an integer of the expected length of a guess, this will prompt the user for a guess until they provide one of the expected length."""
     guess_input: str = str(input("Enter a " + str(expected_length) + " character word: "))
     while len(guess_input) != expected_length:
         guess_input = str(input("That was not " + str(expected_length) + " letters! Try again: "))
@@ -59,11 +59,11 @@ def main() -> None:
             win = True
         print(emoji_string)
     
-    
     if win:
         print("You won in " + str(turns) + "/6 turns! ")
     else:
         print(" X/6 - Sorry, try again tomorrow!")
     
+
 if __name__ == "__main__":
     main()
