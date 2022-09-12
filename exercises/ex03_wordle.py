@@ -5,6 +5,7 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
+
 def contains_char(word: str, letter: str) -> bool:
     """Determines if the single character of the second string is found anywhere in the first string."""
     assert len(letter) == 1
@@ -14,6 +15,7 @@ def contains_char(word: str, letter: str) -> bool:
             return True
         i += 1 
     return False
+
 
 def emojified(guess: str, secret_word: str) -> str:
     """Given a guess and the secret word, this function definition returns the corresponding emoji"""
@@ -40,6 +42,7 @@ def input_guess(expected_length: int) -> str:
     if len(guess_input) == expected_length:
         return guess_input
 
+
 def main() -> None:
     """The entrypoint of the program and main game loop."""
     turns: int = 0
@@ -51,12 +54,13 @@ def main() -> None:
         turns += 1
         print("=== Turn " + str(turns) + "/6 ===")
         user_guess = input_guess(len(secret))
-        emoji_string = emojified(user_guess,secret)
+        emoji_string = emojified(user_guess, secret)
         if user_guess == secret:
             win = True
         print(emoji_string)
     
-    if win == True:
+    
+    if win:
         print("You won in " + str(turns) + "/6 turns! ")
     else:
         print(" X/6 - Sorry, try again tomorrow!")
