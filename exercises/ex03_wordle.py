@@ -40,8 +40,7 @@ def input_guess(expected_length: int) -> str:
     guess_input: str = str(input("Enter a " + str(expected_length) + " character word: "))
     while len(guess_input) != expected_length:
         guess_input = str(input("That was not " + str(expected_length) + " letters! Try again: "))
-    if len(guess_input) == expected_length:
-        return guess_input
+    return guess_input
 
 
 def main() -> None:
