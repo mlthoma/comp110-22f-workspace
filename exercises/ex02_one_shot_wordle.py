@@ -1,7 +1,7 @@
 """EX02 - One Shot Wordle - Another step toward Wordle."""
 __author__ = "730578788"
 
-secret_word: str = "python"
+secret_word: str = "pythons"
 guess: str = str(input("What is your 6-letter guess? "))
 secret_length: int = len(secret_word)
 i: int = 0
