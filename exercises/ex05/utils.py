@@ -19,7 +19,7 @@ def concat(list_1: list[int], list_2: list[int]) -> list[int]:
     i: int = 0
     while i < len(list_1):
         concat_list.append(list_1[i])
-        i +=1
+        i += 1
     i: int = 0
     while i < len(list_2):
         concat_list.append(list_2[i])
@@ -37,12 +37,7 @@ def sub(integer_list: list[int], integer_1: int, integer_2: int) -> list[int]:
         integer_2 = len(integer_list)
     elif len(integer_list) == 0 or integer_1 > len(integer_list) or integer_2 == 0:
         return sub_list
-    while i< integer_2:
+    while i < integer_2:
         sub_list.append(integer_list[i])
         i += 1
     return sub_list
-
-
-    
-    
-
