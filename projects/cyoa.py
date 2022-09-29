@@ -31,6 +31,7 @@ def greet() -> None:
     print("Welcome! In this game, you have to train and take care of your animal. You're animal get berries to gain points. Also, to gain more points, your animal has to win a fight with another animal." + GRIN_EMOJI)
     player = input("What is your animal's name? ")
 
+
 def get_berries(berry_choice: int) -> int:
     """Animal eats the berry it chose to restore health."""
     global points
@@ -42,6 +43,7 @@ def get_berries(berry_choice: int) -> int:
       points += 5
 
     return points
+
 
 def fight() -> None:
     """Animal fights and gets points depending on if they win or not."""
@@ -57,14 +59,11 @@ def fight() -> None:
       print("Better luck next time, " + player)
       return points
 
+
 def end_game() -> None:
     """Allows user to end game and displays their total adventure points."""
     global points
     print(f"Thanks for playing! Total Adventure Points: {points} " + GRIN_EMOJI)
-
-
-
-
 
 
 if __name__ == "__main__":
