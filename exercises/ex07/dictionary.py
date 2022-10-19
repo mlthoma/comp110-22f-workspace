@@ -1,10 +1,10 @@
 """EX07 - Practice with Dictionary Functions."""
 __author__ = "730578788"
 
-# from exercises.ex07.dictionary import invert
+
 def invert(dictionary: dict[str, str]) -> dict[str, str]:
     """Inverts the keys and values of the dictionary input."""
-    invert_result: dict[str,str] = {}
+    invert_result: dict[str, str] = {}
     for key in dictionary:
         if dictionary[key] in invert_result:
             raise KeyError("Error: There's more than one of the same key.")
@@ -13,7 +13,7 @@ def invert(dictionary: dict[str, str]) -> dict[str, str]:
     return invert_result
 
 
-def favorite_color(name_and_colors: dict[str,str]) -> str:
+def favorite_color(name_and_colors: dict[str, str]) -> str:
     """Returns the color that appears the most frequently."""
     frequent_color: str = ""
     high_score: int = 0
@@ -32,7 +32,7 @@ def favorite_color(name_and_colors: dict[str,str]) -> str:
     return frequent_color
 
 
-def count(word_list: list[str]) -> dict[str,int]:
+def count(word_list: list[str]) -> dict[str, int]:
     """Each key is a value in the given list and the values are the count of the number of times that value appeared in the input list."""
     result: dict[str, int] = {}
     for current_value in word_list:
@@ -41,6 +41,3 @@ def count(word_list: list[str]) -> dict[str,int]:
         else:
             result[current_value] = 1
     return result
-
-
-

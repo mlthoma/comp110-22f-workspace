@@ -18,14 +18,14 @@ def test_invert_empty() -> None:
 
 def test_invert_single_letters() -> None:
     """Tests used case for dictionary of single letter keys and values."""
-    dictionary: dict[str, str] = {'a': 'z', 'b' : 'y', 'c': 'x'}
-    assert invert(dictionary) == {'z': 'a', 'y': 'b', 'x': 'c'}
+    dictionary: dict[str, str] = {'a': 'b', 'c': 'y', 'd': 'x'}
+    assert invert(dictionary) == {'b': 'a', 'y': 'c', 'x': 'd'}
 
 
 def test_invert_strings() -> None:
-    """Tests used case for dictionary of word string keys and values"""
-    dictionary: dict[str, str] = {"apple" : "cinnamon", "strawberry": "banana"}
-    assert invert(dictionary) == {"cinnamon" : "apple", "banana" : "strawberry"}
+    """Tests used case for dictionary of word string keys and values."""
+    dictionary: dict[str, str] = {"apple": "cinnamon", "strawberry": "banana"}
+    assert invert(dictionary) == {"cinnamon": "apple", "banana": "strawberry"}
 
 
 def test_favorite_color_multiple() -> None:
@@ -55,10 +55,10 @@ def test_count_empty() -> None:
 def test_count_frequent_strings() -> None:
     """Tests used case where the input list contains values that appear more than once."""
     word_list: list[str] = ["apple", "goat", "corn", "corn", "apple", "apple"]
-    assert count(word_list) == {'apple' : 3, 'goat' : 1, 'corn' : 2}
+    assert count(word_list) == {'apple': 3, 'goat': 1, 'corn': 2}
 
 
 def test_count_same_number() -> None:
     """Tests used case where the input list contains values that each appear the same number of times."""
     word_list: list[str] = ["dog", "cow", "pig", "dog", "cow", "pig"]
-    assert count(word_list) == {'dog' : 2, 'cow' : 2, 'pig' : 2}
+    assert count(word_list) == {'dog': 2, 'cow': 2, 'pig': 2}
